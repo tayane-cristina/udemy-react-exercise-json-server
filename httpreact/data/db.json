@@ -44,6 +44,16 @@
       "name": "saia vermelha",
       "price": "74.25",
       "id": 9
+    },
+    {
+      "name": "Pulseira prateada",
+      "price": "36.90",
+      "id": 10
+    },
+    {
+      "name": "Colete de tricor",
+      "price": "69.90",
+      "id": 11
     }
   ]
 }

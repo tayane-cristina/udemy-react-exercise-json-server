@@ -1,6 +1,5 @@
 import './App.css';
-import {useEffect, useState} from "react";
-
+import { useEffect, useState} from "react";
 
 const url = "http://localhost:3000/products"
 
@@ -23,6 +22,7 @@ function App() {
     fetchData();
   }, [])
 
+  
   // Adicionando produtos:
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -39,6 +39,13 @@ function App() {
       },
       body: JSON.stringify(product),
     });
+
+    const addProduct = await res.json();
+
+    setProducts((previousProduct) => [...previousProduct, addProduct])
+
+    setName("");
+    setPrice("");
   };
 
 
