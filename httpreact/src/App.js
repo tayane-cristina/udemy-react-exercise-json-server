@@ -7,6 +7,8 @@ function App() {
 
   const [products, setProducts] = useState([]);
 
+  const [loading, setLoading] = useState(false)
+
   const [name, setName] = useState("");
   const [price, setPrice] = useState("")
   
@@ -15,9 +17,14 @@ function App() {
  // Resgatando dados:
   useEffect(() => {
     async function fetchData(){
+      
+      setLoading(true)
+
       const res = await fetch(url)
       const data = await res.json()
       setProducts(data)
+
+      setLoading(false)
     }
     fetchData();
   }, [])
@@ -53,14 +60,15 @@ function App() {
   return (
     <div className="App">
       <h1>Lista de produtos</h1>
-      <ul>
+      {loading && <p className='loading'>Carregando dados...</p>}
+      {!loading && <ul>
         {products.map((item) => {
           return <li key={item.id}>
             <p><strong>Nome: </strong>{item.name}</p>
             <p><strong>preço: </strong>{item.price}</p>
           </li>
         })}
-      </ul>
+      </ul>}
       <div className='add-product'>
         <form onSubmit={handleSubmit} className="form-add-product">
           <label>

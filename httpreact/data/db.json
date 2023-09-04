@@ -54,6 +54,46 @@
       "name": "Colete de tricor",
       "price": "69.90",
       "id": 11
+    },
+    {
+      "name": "Camisa manga longa",
+      "price": "80",
+      "id": 12
+    },
+    {
+      "name": "cordão de couro",
+      "price": "25.99",
+      "id": 13
+    },
+    {
+      "name": "cabo de rede",
+      "price": "30",
+      "id": 14
+    },
+    {
+      "name": "mouse",
+      "price": "10.99",
+      "id": 15
+    },
+    {
+      "name": "teclado branco",
+      "price": "15",
+      "id": 16
+    },
+    {
+      "name": "celular ",
+      "price": "800",
+      "id": 17
+    },
+    {
+      "name": "computador",
+      "price": "1500",
+      "id": 18
+    },
+    {
+      "name": "short",
+      "price": "79",
+      "id": 19
     }
   ]
 }
