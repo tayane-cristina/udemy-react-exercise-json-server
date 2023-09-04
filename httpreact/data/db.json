@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "camisa amarela",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "regata verde",
+      "price": 49.9
+    },
+    {
+      "id": 3,
+      "name": "bermuda branca",
+      "price": 19.9
+    },
+    {
+      "id": 4,
+      "name": "boné aba reta",
+      "price": 9.9
+    },
+    {
+      "id": 5,
+      "name": "pulseira de coro",
+      "price": 59.9
+    },
+    {
+      "id": 6,
+      "name": "tênis preto",
+      "price": 29.9
+    },
+    {
+      "name": "Camisa manga curta",
+      "price": "15.95",
+      "id": 7
+    },
+    {
+      "name": "short jeans",
+      "price": "30.99",
+      "id": 8
+    },
+    {
+      "name": "saia vermelha",
+      "price": "74.25",
+      "id": 9
+    }
+  ]
+}
