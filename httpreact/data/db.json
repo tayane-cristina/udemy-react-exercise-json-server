@@ -94,6 +94,11 @@
       "name": "short",
       "price": "79",
       "id": 19
+    },
+    {
+      "name": "rosa",
+      "price": "5",
+      "id": 20
     }
   ]
 }

@@ -9,6 +9,8 @@ function App() {
 
   const [loading, setLoading] = useState(false)
 
+  const [error, setError] = useState(null)
+
   const [name, setName] = useState("");
   const [price, setPrice] = useState("")
   
@@ -20,11 +22,19 @@ function App() {
       
       setLoading(true)
 
-      const res = await fetch(url)
-      const data = await res.json()
-      setProducts(data)
+      try {
+        const res = await fetch(url)
+        const data = await res.json()
+        setProducts(data)
 
-      setLoading(false)
+       
+      } catch (error) {
+        console.log(error.message)
+
+        setError("Houve um erro ao carregar os dados...")
+      }
+
+       setLoading(false)
     }
     fetchData();
   }, [])
@@ -61,7 +71,8 @@ function App() {
     <div className="App">
       <h1>Lista de produtos</h1>
       {loading && <p className='loading'>Carregando dados...</p>}
-      {!loading && <ul>
+      {error && <p>{error}</p>}
+      {!error && <ul>
         {products.map((item) => {
           return <li key={item.id}>
             <p><strong>Nome: </strong>{item.name}</p>
@@ -77,6 +88,7 @@ function App() {
             name='name'
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
             ></input>
           </label>
           <label>
@@ -85,9 +97,11 @@ function App() {
             name='price'
             value={price}
             onChange={(e) => setPrice(e.target.value)}
+            required
             ></input>
           </label>
-          <button type='submit' >Enviar dados</button>
+          {loading && <button type='submit' disabled value="aguarde">Aguarde</button>}
+          {!loading && <button type='submit'>Enviar dados</button>}
         </form>
       </div>
     </div>
