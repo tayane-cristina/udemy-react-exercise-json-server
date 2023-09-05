@@ -11,8 +11,11 @@ function App() {
 
   const [error, setError] = useState(null)
 
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("")
+
+  //Criar cadastro de produto
+  const [code, setCode] = useState(0);
+  const [produce, setProduce] = useState("")
+  const [spin, setSpin] = useState(0)
   
 
 
@@ -45,8 +48,9 @@ function App() {
     e.preventDefault()
 
     const product = {
-      name,
-      price,
+      code,
+      produce,
+      spin,
     };
 
     const res = await fetch(url, {
@@ -61,42 +65,53 @@ function App() {
 
     setProducts((previousProduct) => [...previousProduct, addProduct])
 
-    setName("");
-    setPrice("");
+    setCode("");
+    setProduce("");
+    setSpin()
   };
 
 
   
   return (
     <div className="App">
-      <h1>Lista de produtos</h1>
+      <h1>Pasta 3 - Perfumária</h1>
       {loading && <p className='loading'>Carregando dados...</p>}
       {error && <p>{error}</p>}
       {!error && <ul>
         {products.map((item) => {
           return <li key={item.id}>
-            <p><strong>Nome: </strong>{item.name}</p>
-            <p><strong>preço: </strong>{item.price}</p>
+            <p className='infor-product'><strong>Código </strong>{item.code}</p>
+            <p className='infor-product'><strong>Produto </strong>{item.produce}</p>
+            <p className='infor-product'><strong>Giro </strong>{item.spin}</p>
           </li>
         })}
       </ul>}
       <div className='add-product'>
         <form onSubmit={handleSubmit} className="form-add-product">
           <label>
-            Nome:
-            <input type="text"
-            name='name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            Código:
+            <input type="number"
+            name='code'
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
             required
             ></input>
           </label>
           <label>
-            Preço:
+            Produto:
+            <input type="text"
+            name='produce'
+            value={produce}
+            onChange={(e) => setProduce(e.target.value)}
+            required
+            ></input>
+          </label>
+          <label>
+            Giro:
             <input type="number"
-            name='price'
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
+            name='spin'
+            value={spin}
+            onChange={(e) => setSpin(e.target.value)}
             required
             ></input>
           </label>

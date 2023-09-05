@@ -2,103 +2,86 @@
   "products": [
     {
       "id": 1,
-      "name": "camisa amarela",
-      "price": 59.9
+      "code": 1001,
+      "produce": "SAB. LUX BUQUE DE JASMIN",
+      "spin": 10
     },
     {
       "id": 2,
-      "name": "regata verde",
-      "price": 49.9
+      "code": 1002,
+      "produce": "SAB. LUX ROSAS FRANCESAS",
+      "spin": 7
     },
     {
-      "id": 3,
-      "name": "bermuda branca",
-      "price": 19.9
+      "code": 1003,
+      "produce": "SAB. LUX LÍRIO AZUL",
+      "spin": "5",
+      "id": 3
     },
     {
-      "id": 4,
-      "name": "boné aba reta",
-      "price": 9.9
+      "code": 1004,
+      "produce": "SAB. LUX FLOR DE VERBENA",
+      "spin": "3",
+      "id": 4
     },
     {
-      "id": 5,
-      "name": "pulseira de coro",
-      "price": 59.9
+      "code": "1005",
+      "produce": "SAB. LUX BRASIL E BROMÉLIA",
+      "spin": "1",
+      "id": 5
     },
     {
-      "id": 6,
-      "name": "tênis preto",
-      "price": 29.9
+      "code": "1006",
+      "produce": "SAB. LUX DAMA DA NOITE",
+      "spin": "1",
+      "id": 6
     },
     {
-      "name": "Camisa manga curta",
-      "price": "15.95",
+      "code": "1204",
+      "produce": "SAB. NIVIA LEITE",
+      "spin": "10",
       "id": 7
     },
     {
-      "name": "short jeans",
-      "price": "30.99",
+      "code": "1205",
+      "produce": "SAB.NIVIA ORQUÍDEA",
+      "spin": "3",
       "id": 8
     },
     {
-      "name": "saia vermelha",
-      "price": "74.25",
+      "code": "1206",
+      "produce": "SAB.NIVIA LAVANDA",
+      "spin": "10",
       "id": 9
     },
     {
-      "name": "Pulseira prateada",
-      "price": "36.90",
+      "code": "1207",
+      "produce": "SAB. NIVIA ERVA-DOCE",
+      "spin": "8",
       "id": 10
     },
     {
-      "name": "Colete de tricor",
-      "price": "69.90",
+      "code": "1208",
+      "produce": "SAB. NIVIA AVEIA",
+      "spin": "12",
       "id": 11
     },
     {
-      "name": "Camisa manga longa",
-      "price": "80",
+      "code": "1578",
+      "produce": "SAB. AUGUSTO CALDAS AROEIRA",
+      "spin": "20",
       "id": 12
     },
     {
-      "name": "cordão de couro",
-      "price": "25.99",
+      "code": "1579",
+      "produce": "SAB. AUGUSTO CALDAS GLICERINA",
       "id": 13
     },
     {
-      "name": "cabo de rede",
-      "price": "30",
+      "code": "1580",
+      "produce": "SAB. AUGUSTO CALDAS GLICERINA LAVANDA",
+      "spin": "12",
       "id": 14
-    },
-    {
-      "name": "mouse",
-      "price": "10.99",
-      "id": 15
-    },
-    {
-      "name": "teclado branco",
-      "price": "15",
-      "id": 16
-    },
-    {
-      "name": "celular ",
-      "price": "800",
-      "id": 17
-    },
-    {
-      "name": "computador",
-      "price": "1500",
-      "id": 18
-    },
-    {
-      "name": "short",
-      "price": "79",
-      "id": 19
-    },
-    {
-      "name": "rosa",
-      "price": "5",
-      "id": 20
     }
   ]
 }
