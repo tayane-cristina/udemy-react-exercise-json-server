@@ -88,6 +88,7 @@ function App() {
       </ul>}
       <div className='add-product'>
         <form onSubmit={handleSubmit} className="form-add-product">
+          <h2>Cadastro de códigos</h2>
           <label>
             Código:
             <input type="number"
